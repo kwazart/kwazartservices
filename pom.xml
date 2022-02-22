@@ -6,7 +6,12 @@
 
   <groupId>com.polozov</groupId>
   <artifactId>kwazartservices</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>customer</module>
+    <module>fraud</module>
+  </modules>
 
   <name>kwazartservices</name>
   <!-- FIXME change it to the project's website -->
