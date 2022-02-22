@@ -1,5 +1,5 @@
 services:
-  postgres:
+  postgres-customer:
     container_name: postgres-customer
     image: postgres
     environment:
@@ -9,7 +9,22 @@ services:
     volumes:
       - postgres:/data/postgres
     ports:
-      - "5434:5432"
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  postgres-fraud:
+    container_name: postgres-fraud
+    image: postgres
+    environment:
+      POSTGRES_USER: kwazart
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
     networks:
       - postgres
     restart: unless-stopped
