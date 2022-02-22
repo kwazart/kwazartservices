@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: customer
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: 'kwazart'
+    url: 'jdbc:postgresql://localhost:5432/customer'
+    password: 'password'
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          format_sql: 'true'
+      hibernate:
+        ddl-auto: update
+      show-sql: 'true'
+      open-in-view: 'true'
+
+#logging:
+#  level:
+#    root: debug
